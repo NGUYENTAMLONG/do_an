@@ -1,0 +1,125 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8 !important;
+}
+
+.experiences .breadcumbs {
+  text-align: center;
+  margin-top: 150px;
+  width: 100%;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experiences .breadcumbs a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.experiences .breadcumbs a:hover {
+  color: crimson;
+}
+
+.experiences .breadcumbs p {
+  height: 10px;
+  color: #0084ff;
+}
+
+.experiences .experiences_title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.experiences [class*="col-"] {
+  margin-bottom: 55px;
+}
+
+.experiences .card {
+  position: relative;
+  padding: 30px;
+  border: none;
+  -webkit-box-shadow: 0 5px 25px -2px gainsboro;
+          box-shadow: 0 5px 25px -2px gainsboro;
+  height: 100%;
+}
+
+.experiences .card .card__icon {
+  position: absolute;
+  top: -50px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: #0084ff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experiences .card .card__icon i {
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+}
+
+.experiences .card .card__stage {
+  font-weight: bold;
+  color: #0084ff;
+  margin-top: 20px;
+}
+
+.experiences .card .card__name h4 {
+  font-weight: bold;
+}
+
+.experiences .card .card__location {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.experiences .card .card__location i {
+  color: crimson;
+}
+
+.experiences .card .card__content {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.experiences .experiences_c {
+  width: 100%;
+  text-align: center;
+  margin: 150px 0px 100px 0px;
+}
+
+.experiences .experiences_c a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=Experiences.css.map */

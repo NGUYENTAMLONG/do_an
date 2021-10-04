@@ -1,0 +1,153 @@
+$facebook: #0084ff;
+.header {
+  display: flex;
+  // background-color: crimson;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s ease-in-out;
+  z-index: 100;
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 23px;
+    transition: 0.5s ease-in-out;
+    i {
+      font-size: 15px;
+    }
+  }
+  .fa-align-right {
+    margin-top: 10px;
+    cursor: pointer;
+    display: none;
+  }
+  .menu_reponsive {
+    display: none;
+    transition: 0.5s ease-in-out;
+    z-index: -100;
+  }
+  .menu {
+    // background-color: chartreuse;
+    overflow: hidden;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        a {
+          margin-top: 10px;
+          display: block;
+          text-decoration: none;
+          color: black;
+          position: relative;
+          transition: 0.5s ease-in-out;
+          padding: 5px 10px 5px 10px;
+          font-weight: bold;
+        }
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: -22px;
+          left: 0;
+          height: 5px;
+          background-color: black;
+          width: 100%;
+          transition: 0.5s ease-in-out;
+          opacity: 0;
+        }
+        a:hover::after {
+          bottom: 0px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.effect {
+  background: $facebook;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 5px 25px -2px rgb(92, 92, 92);
+
+  .logo {
+    color: white !important;
+    border: 3px solid white !important;
+  }
+  .fa-align-right {
+    color: white;
+  }
+  .menu {
+    color: white;
+    ul {
+      li {
+        a {
+          color: white !important;
+        }
+        a::after {
+          background-color: white !important;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .header {
+    position: relative;
+    .fa-align-right {
+      position: absolute;
+      display: block;
+      right: 20px;
+    }
+    .menu_reponsive {
+      position: absolute;
+      background: $facebook;
+      padding: 20px;
+      display: block !important;
+      position: absolute;
+      top: -400px;
+      right: 0;
+      border-bottom-left-radius: 20px;
+      .menu {
+        display: block !important;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}

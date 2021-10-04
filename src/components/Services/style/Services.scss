@@ -1,0 +1,169 @@
+$facebook: #0084ff;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  background-color: #f8f8f8 !important;
+  // background-color: black !important;
+}
+.services {
+  .breadcumbs {
+    text-align: center;
+    margin-top: 150px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      margin-right: 10px;
+      color: rgba(0, 0, 0, 0.4);
+      transition: 0.5s ease-in-out;
+    }
+    a:hover {
+      color: crimson;
+    }
+    p {
+      height: 10px;
+      color: $facebook;
+    }
+  }
+
+  .services_title {
+    width: 100%;
+    text-align: center;
+  }
+  [class*="col-"] {
+    margin-bottom: 20px;
+  }
+  .card {
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    height: 100%;
+    border: none;
+    box-shadow: 0 5px 25px -2px gainsboro;
+    transition: 0.3s ease-in-out;
+    .card__icon {
+      font-size: 60px;
+      color: $facebook;
+    }
+    .card__name {
+      h4 {
+        font-weight: bold;
+      }
+    }
+    .card__content {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .card:hover {
+    background-color: crimson;
+    .card__icon,
+    .card__name,
+    .card__content {
+      color: white;
+    }
+  }
+}
+.pricing {
+  margin-top: 150px;
+  .small_title,
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
+  text-align: center;
+  .card__pay {
+    box-shadow: 0 5px 25px -2px gainsboro;
+    padding: 30px;
+    border: none;
+    height: 100%;
+    .card__pay__price {
+      h1 {
+        font-weight: bold;
+        display: block;
+        color: $facebook;
+        i {
+          margin-right: 5px;
+          font-size: 30px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+    .card__pay__name {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .card__pay__benefits {
+      height: 250px;
+      p {
+        font-weight: bold;
+        i {
+          color: $facebook;
+        }
+        color: rgba(0, 0, 0, 0.4);
+      }
+      .benefit_important {
+        background-color: rgba(128, 128, 128, 0.219);
+        border-radius: 5px;
+      }
+    }
+
+    button {
+      background-color: crimson;
+      color: white;
+      outline: none;
+      border: none;
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+  }
+  .services_c {
+    margin: 150px 0px 100px 0px;
+    a {
+      margin-left: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .pricing {
+    .card__pay {
+      .card__pay__name {
+        font-weight: bold;
+        font-size: 17px;
+      }
+      .card__pay__benefits {
+        p {
+          font-weight: bold;
+          font-size: 13.5px;
+        }
+      }
+      button {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .pricing {
+    .card__pay {
+      .card__pay__benefits {
+        p {
+          font-weight: bold;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

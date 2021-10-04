@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.about .breadcumbs {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .breadcumbs a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.about .breadcumbs a:hover {
+  color: crimson;
+}
+
+.about .breadcumbs p {
+  height: 10px;
+  color: #0084ff;
+}
+
+.about .about_title {
+  width: 100%;
+  text-align: center;
+}
+
+.about .col__left {
+  background-color: orange;
+}
+
+.about .col__left .content {
+  border: #f8f8f8 solid 5px;
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+}
+
+.about .col__left .content .count {
+  font-size: 50px;
+  font-weight: bold;
+  color: #0084ff;
+}
+
+.about .col__left .content p {
+  font-weight: bold;
+}
+
+.about .col__right .small_title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.about .col__right h2 {
+  font-weight: bold;
+}
+
+.about .col__right .text {
+  color: #999999;
+}
+
+.about .col__right .info_left,
+.about .col__right .info_right {
+  font-weight: bold;
+}
+
+.about .col__right .info_left p span,
+.about .col__right .info_right p span {
+  color: #0084ff;
+}
+
+.about .col__right button {
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 25px;
+}
+
+.skill {
+  margin-top: 150px;
+}
+
+.skill .small_title,
+.skill h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.skill .small_title {
+  color: #0084ff;
+}
+
+.skill .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.skill .tag h6 {
+  color: crimson;
+  font-weight: bold;
+}
+
+.testimonial {
+  margin-top: 150px;
+}
+
+.testimonial .small_title,
+.testimonial h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.testimonial .small_title {
+  color: #0084ff;
+}
+
+.testimonial .box {
+  margin: 5px;
+  width: 95%;
+  -webkit-box-shadow: 0 5px 25px -2px #a19f9f;
+          box-shadow: 0 5px 25px -2px #a19f9f;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 270px;
+}
+
+.testimonial .box .box__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.testimonial .box .box__header .box__avatar {
+  height: 80px;
+  width: 80px;
+  position: relative;
+}
+
+.testimonial .box .box__header .box__avatar img {
+  border-radius: 50%;
+}
+
+.testimonial .box .box__header i {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background-color: crimson;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.testimonial .box .box__info,
+.testimonial .box .box__info h5 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.testimonial .box .box__info h5 {
+  color: #0084ff;
+}
+
+.testimonial .box .box__body {
+  padding: 20px 40px;
+  font-weight: bold;
+  color: #999999;
+}
+
+.testimonial .about_c {
+  margin: 200px 0px 100px 0px;
+  text-align: center;
+}
+
+.testimonial .about_c a {
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.slick-next,
+.slick-prev {
+  background-color: #0084ff !important;
+  border-radius: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .slick-next {
+    margin-right: 40px;
+  }
+  .slick-prev {
+    margin-left: 40px;
+  }
+}
+/*# sourceMappingURL=About.css.map */

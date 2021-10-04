@@ -1,0 +1,183 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8 !important;
+}
+
+.services .breadcumbs {
+  text-align: center;
+  margin-top: 150px;
+  width: 100%;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services .breadcumbs a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.services .breadcumbs a:hover {
+  color: crimson;
+}
+
+.services .breadcumbs p {
+  height: 10px;
+  color: #0084ff;
+}
+
+.services .services_title {
+  width: 100%;
+  text-align: center;
+}
+
+.services [class*="col-"] {
+  margin-bottom: 20px;
+}
+
+.services .card {
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  height: 100%;
+  border: none;
+  -webkit-box-shadow: 0 5px 25px -2px gainsboro;
+          box-shadow: 0 5px 25px -2px gainsboro;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.services .card .card__icon {
+  font-size: 60px;
+  color: #0084ff;
+}
+
+.services .card .card__name h4 {
+  font-weight: bold;
+}
+
+.services .card .card__content {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.services .card:hover {
+  background-color: crimson;
+}
+
+.services .card:hover .card__icon,
+.services .card:hover .card__name,
+.services .card:hover .card__content {
+  color: white;
+}
+
+.pricing {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.pricing .small_title,
+.pricing h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.pricing .card__pay {
+  -webkit-box-shadow: 0 5px 25px -2px gainsboro;
+          box-shadow: 0 5px 25px -2px gainsboro;
+  padding: 30px;
+  border: none;
+  height: 100%;
+}
+
+.pricing .card__pay .card__pay__price h1 {
+  font-weight: bold;
+  display: block;
+  color: #0084ff;
+}
+
+.pricing .card__pay .card__pay__price h1 i {
+  margin-right: 5px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pricing .card__pay .card__pay__name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pricing .card__pay .card__pay__benefits {
+  height: 250px;
+}
+
+.pricing .card__pay .card__pay__benefits p {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pricing .card__pay .card__pay__benefits p i {
+  color: #0084ff;
+}
+
+.pricing .card__pay .card__pay__benefits .benefit_important {
+  background-color: rgba(128, 128, 128, 0.219);
+  border-radius: 5px;
+}
+
+.pricing .card__pay button {
+  background-color: crimson;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.pricing .services_c {
+  margin: 150px 0px 100px 0px;
+}
+
+.pricing .services_c a {
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 1199.98px) {
+  .pricing .card__pay .card__pay__name {
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .pricing .card__pay .card__pay__benefits p {
+    font-weight: bold;
+    font-size: 13.5px;
+  }
+  .pricing .card__pay button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .pricing .card__pay .card__pay__benefits p {
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=Services.css.map */

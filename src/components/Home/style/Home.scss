@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+$facebook: #0084ff;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f8f8f8 !important;
+  // background-color: black !important;
+}
+
+// .header {
+//   display: flex;
+//   // background-color: crimson;
+//   justify-content: space-between;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   margin-left: auto;
+//   margin-right: auto;
+//   .logo {
+//     font-size: 20px;
+//     font-weight: bold;
+//     border: 3px solid black;
+//     padding: 5px;
+//     text-align: center;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+//     text-decoration: none;
+//     color: black;
+//     border-top-right-radius: 20px;
+//     border-bottom-left-radius: 20px;
+//     font-size: 23px;
+//     i {
+//       font-size: 15px;
+//     }
+//   }
+//   .menu {
+//     // background-color: chartreuse;
+//     overflow: hidden;
+//     ul {
+//       display: flex;
+//       list-style: none;
+//       li {
+//         a {
+//           margin-top: 10px;
+//           display: block;
+//           text-decoration: none;
+//           color: black;
+//           position: relative;
+//           // background-color: yellow;
+//           padding: 5px 10px 5px 10px;
+//           font-weight: bold;
+//         }
+//         a::after {
+//           content: "";
+//           position: absolute;
+//           bottom: -22px;
+//           left: 0;
+//           height: 5px;
+//           background-color: black;
+//           width: 100%;
+//           transition: 0.5s ease-in-out;
+//           opacity: 0;
+//         }
+//         a:hover::after {
+//           bottom: 0px;
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+// }
+.header {
+  position: fixed;
+}
+.home {
+  margin-top: 60px;
+  .col__left {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    .col__left__intro__1 {
+      font-weight: bold;
+      font-size: 20px;
+      color: crimson;
+      margin-top: 40px;
+    }
+    .col__left__intro__2 {
+      font-size: 80px;
+      font-weight: bold;
+    }
+    .col__left__btns {
+      button {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+      }
+      button:nth-of-type(1) {
+        padding: 20px 25px;
+        color: white;
+        background-color: $facebook;
+      }
+      button:nth-of-type(2) {
+        padding: 20px 25px;
+        color: white;
+        color: black;
+      }
+    }
+    .col__left__c {
+      position: absolute;
+      bottom: 0;
+      a {
+        text-decoration: none;
+        margin-left: 5px;
+      }
+    }
+  }
+  .col__right {
+    width: 100%;
+    height: 90vh;
+    background-color: $facebook;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    .carousel {
+      img {
+        width: 100%;
+        height: 90vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home {
+    margin-top: 60px;
+    .col__left {
+      background-image: url("https://preview.colorlib.com/theme/schmidt/images/xjschmidt.png.pagespeed.ic.oRl8rvVmhD.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      .col__left__intro__1 {
+        font-size: 15px;
+        margin-top: 250px;
+      }
+      .col__left__intro__2 {
+        font-size: 50px;
+        font-weight: bold;
+        color: $facebook;
+      }
+      .col__left__btns {
+        button {
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          border: none;
+          cursor: pointer;
+          -webkit-box-reflect: below 10px
+            linear-gradient(transparent, transparent);
+        }
+      }
+    }
+    .col__right {
+      display: none;
+    }
+  }
+}

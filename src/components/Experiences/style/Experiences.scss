@@ -1,0 +1,98 @@
+$facebook: #0084ff;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  background-color: #f8f8f8 !important;
+  // background-color: black !important;
+}
+.experiences {
+  .breadcumbs {
+    text-align: center;
+    margin-top: 150px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      margin-right: 10px;
+      color: rgba(0, 0, 0, 0.4);
+      transition: 0.5s ease-in-out;
+    }
+    a:hover {
+      color: crimson;
+    }
+    p {
+      height: 10px;
+      color: $facebook;
+    }
+  }
+  .experiences_title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  [class*="col-"] {
+    margin-bottom: 55px;
+  }
+  .card {
+    position: relative;
+    padding: 30px;
+    border: none;
+    box-shadow: 0 5px 25px -2px gainsboro;
+    height: 100%;
+    .card__icon {
+      position: absolute;
+      top: -50px;
+      left: 50px;
+      width: 80px;
+      height: 80px;
+      background-color: $facebook;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 40px;
+        padding: 20px;
+        border-radius: 50%;
+        color: white;
+      }
+    }
+    .card__stage {
+      font-weight: bold;
+      color: $facebook;
+      margin-top: 20px;
+    }
+    .card__name {
+      h4 {
+        font-weight: bold;
+      }
+    }
+    .card__location {
+      i {
+        color: crimson;
+      }
+      color: rgba(0, 0, 0, 0.4);
+      font-weight: bold;
+    }
+    .card__content {
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .experiences_c {
+    width: 100%;
+    text-align: center;
+    margin: 150px 0px 100px 0px;
+    a {
+      text-decoration: none;
+      margin-left: 5px;
+    }
+  }
+}

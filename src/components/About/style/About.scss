@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+$facebook: #0084ff;
+.about {
+  .breadcumbs {
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      margin-right: 10px;
+      color: rgba(0, 0, 0, 0.4);
+      transition: 0.5s ease-in-out;
+    }
+    a:hover {
+      color: crimson;
+    }
+    p {
+      height: 10px;
+      color: $facebook;
+    }
+  }
+  .about_title {
+    width: 100%;
+    text-align: center;
+  }
+  .col__left {
+    background-color: orange;
+    .content {
+      border: #f8f8f8 solid 5px;
+      padding: 50px;
+      text-align: center;
+      background-color: white;
+      .count {
+        font-size: 50px;
+        font-weight: bold;
+        color: $facebook;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+  .col__right {
+    .small_title {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    .text {
+      color: rgb(153, 153, 153);
+    }
+    .info_left,
+    .info_right {
+      font-weight: bold;
+      p {
+        span {
+          color: $facebook;
+        }
+      }
+    }
+    button {
+      background-color: $facebook;
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 25px;
+    }
+  }
+}
+.skill {
+  margin-top: 150px;
+  .small_title,
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .small_title {
+    color: $facebook;
+  }
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-weight: bold;
+    h6 {
+      color: crimson;
+      font-weight: bold;
+    }
+  }
+}
+
+.testimonial {
+  margin-top: 150px;
+  .small_title,
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .small_title {
+    color: $facebook;
+  }
+  .box {
+    margin: 5px;
+    width: 95%;
+    box-shadow: 0 5px 25px -2px rgb(161, 159, 159);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 270px;
+    .box__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .box__avatar {
+        height: 80px;
+        width: 80px;
+        position: relative;
+        img {
+          border-radius: 50%;
+        }
+      }
+      i {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        background-color: crimson;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+    .box__info,
+    .box__info h5 {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .box__info h5 {
+      color: $facebook;
+    }
+    .box__body {
+      padding: 20px 40px;
+      font-weight: bold;
+      color: rgb(153, 153, 153);
+    }
+  }
+  .about_c {
+    margin: 200px 0px 100px 0px;
+    text-align: center;
+    a {
+      margin-left: 5px;
+      text-decoration: none;
+    }
+  }
+}
+.slick-next,
+.slick-prev {
+  background-color: #0084ff !important;
+  border-radius: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .slick-next {
+    margin-right: 40px;
+  }
+  .slick-prev {
+    margin-left: 40px;
+  }
+}

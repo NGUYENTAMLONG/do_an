@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f8f8 !important;
+}
+
+.header {
+  position: fixed;
+}
+
+.home {
+  margin-top: 60px;
+}
+
+.home .col__left {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+
+.home .col__left .col__left__intro__1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: crimson;
+  margin-top: 40px;
+}
+
+.home .col__left .col__left__intro__2 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.home .col__left .col__left__btns button {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+}
+
+.home .col__left .col__left__btns button:nth-of-type(1) {
+  padding: 20px 25px;
+  color: white;
+  background-color: #0084ff;
+}
+
+.home .col__left .col__left__btns button:nth-of-type(2) {
+  padding: 20px 25px;
+  color: white;
+  color: black;
+}
+
+.home .col__left .col__left__c {
+  position: absolute;
+  bottom: 0;
+}
+
+.home .col__left .col__left__c a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.home .col__right {
+  width: 100%;
+  height: 90vh;
+  background-color: #0084ff;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.home .col__right .carousel img {
+  width: 100%;
+  height: 90vh;
+}
+
+@media (max-width: 767.98px) {
+  .home {
+    margin-top: 60px;
+  }
+  .home .col__left {
+    background-image: url("https://preview.colorlib.com/theme/schmidt/images/xjschmidt.png.pagespeed.ic.oRl8rvVmhD.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .home .col__left .col__left__intro__1 {
+    font-size: 15px;
+    margin-top: 250px;
+  }
+  .home .col__left .col__left__intro__2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0084ff;
+  }
+  .home .col__left .col__left__btns button {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent);
+  }
+  .home .col__right {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
