@@ -37,10 +37,6 @@
   text-align: center;
 }
 
-.about .col__left {
-  background-color: orange;
-}
-
 .about .col__left .content {
   border: #f8f8f8 solid 5px;
   padding: 50px;

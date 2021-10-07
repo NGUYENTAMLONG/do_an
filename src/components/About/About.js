@@ -2,256 +2,290 @@ import React, { Component } from "react";
 import "./style/About.css";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
-
+import Flip from "react-reveal/Flip";
+import CountUp from "react-countup";
+import Bounce from "react-reveal/Bounce";
+import Rotate from "react-reveal/Rotate";
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import Scrollup from "../Scrollup";
 export default function About() {
-  // var settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: false,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 640,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         infinite: false,
-  //         dots: true,
-  //       },
-  //     },
-  //   ],
-  // };
+  let statistical = [
+    { count: 1250, dr: 3, p: "Happy Clients" },
+    { count: 1100, dr: 4, p: "Projects Done" },
+    { count: 500, dr: 2, p: "Cups of Coffee" },
+    { count: 642, dr: 3, p: "Working Hourse" },
+  ];
+  let show = statistical.map((item, index) => {
+    return (
+      <Rotate top left cascade key={index}>
+        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 content">
+          <p className="count">
+            <CountUp duration={item.dr} end={item.count} />
+          </p>
+          <p>{item.p}</p>
+        </div>
+      </Rotate>
+    );
+  });
 
+  let skill_scale = [
+    [
+      {
+        h6: "ADOBE PHOTOSHOP",
+        icon: <i className="fas fa-2x fa-photo-video"></i>,
+        percent: 90,
+        vln: 90,
+        vlmn: 0,
+        vlmx: 100,
+        w: "90%",
+      },
+      {
+        h6: "JAVASCRIPT",
+        icon: <i className="fab fa-2x fa-js"></i>,
+        percent: 85,
+        vln: 85,
+        vlmn: 0,
+        vlmx: 100,
+        w: "85%",
+      },
+      {
+        h6: "WORDPRESS",
+        icon: <i className="fab fa-2x fa-wordpress"></i>,
+        percent: 70,
+        vln: 70,
+        vlmn: 0,
+        vlmx: 100,
+        w: "70%",
+      },
+    ],
+    [
+      {
+        h6: "FIGMA",
+        icon: <i className="fab fa-2x fa-figma"></i>,
+        percent: 95,
+        vln: 95,
+        vlmn: 0,
+        vlmx: 100,
+        w: "95%",
+      },
+      {
+        h6: "HTML5",
+        icon: <i className="fab fa-2x fa-html5"></i>,
+        percent: 95,
+        vln: 95,
+        vlmn: 0,
+        vlmx: 100,
+        w: "95%",
+      },
+      {
+        h6: "ADOBE XD",
+        icon: <i className="fas fa-2x fa-icons"></i>,
+        percent: 80,
+        vln: 80,
+        vlmn: 0,
+        vlmx: 100,
+        w: "80%",
+      },
+    ],
+    [
+      {
+        h6: "ADOBE ILLUSTRATOR",
+        icon: <i className="fas fa-2x fa-hat-wizard"></i>,
+        percent: 90,
+        vln: 90,
+        vlmn: 0,
+        vlmx: 100,
+        w: "90%",
+      },
+      {
+        h6: "CSS3",
+        icon: <i className="fab fa-2x fa-css3-alt"></i>,
+        percent: 90,
+        vln: 90,
+        vlmn: 0,
+        vlmx: 100,
+        w: "90%",
+      },
+      {
+        h6: "SEO",
+        icon: <i className="fas fa-2x fa-globe-americas"></i>,
+        percent: 75,
+        vln: 75,
+        vlmn: 0,
+        vlmx: 100,
+        w: "75%",
+      },
+    ],
+  ];
+  function Format(props) {
+    return (
+      <div key={props.index}>
+        <div className="tag">
+          <Slide left>
+            <h6>
+              {props.icon} {props.h6}
+            </h6>
+          </Slide>
+          <Rotate top left cascade>
+            <p className="percent">
+              <CountUp duration={3} end={props.percent} />%
+            </p>
+          </Rotate>
+        </div>
+        <div className="progress">
+          <Fade left>
+            <div
+              className="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuenow={props.vln}
+              aria-valuemin={props.vlmn}
+              aria-valuemax={props.vlmx}
+              style={{ width: props.w }}
+            />
+          </Fade>
+        </div>
+      </div>
+    );
+  }
+  let showSkills_1 = skill_scale[0].map((item, index) => {
+    return (
+      <Format
+        key={index}
+        h6={item.h6}
+        icon={item.icon}
+        percent={item.percent}
+        vln={item.vln}
+        vlmn={item.vlmx}
+        vlmx={item.vlmx}
+        w={item.w}
+      />
+    );
+  });
+  let showSkills_2 = skill_scale[1].map((item, index) => {
+    return (
+      <Format
+        key={index}
+        h6={item.h6}
+        icon={item.icon}
+        percent={item.percent}
+        vln={item.vln}
+        vlmn={item.vlmx}
+        vlmx={item.vlmx}
+        w={item.w}
+      />
+    );
+  });
+  let showSkills_3 = skill_scale[2].map((item, index) => {
+    return (
+      <Format
+        key={index}
+        h6={item.h6}
+        icon={item.icon}
+        percent={item.percent}
+        vln={item.vln}
+        vlmn={item.vlmx}
+        vlmx={item.vlmx}
+        w={item.w}
+      />
+    );
+  });
   return (
     <div>
       <div>
         <div className="about container">
           <div className="row mb-4">
-            <div className="breadcumbs">
-              <Link to="/">
-                HOME <i className="fas fa-chevron-right" />
-              </Link>
-              <p>
-                ABOUT US <i className="fas fa-chevron-right" />
-              </p>
-            </div>
-            <h1 className="about_title">About Me</h1>
+            <Bounce left cascade>
+              <div className="breadcumbs">
+                <Link to="/">
+                  HOME <i className="fas fa-chevron-right" />
+                </Link>
+                <p>
+                  ABOUT US <i className="fas fa-chevron-right" />
+                </p>
+              </div>
+            </Bounce>
+            <Flip bottom>
+              <h1 className="about_title">About Me</h1>
+            </Flip>
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col__left">
-              <div className="row row_1">
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 content">
-                  <p className="count">5,000</p>
-                  <p>Happy Clients</p>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 content">
-                  <p className="count">1,200</p>
-                  <p>Projects Done</p>
-                </div>
-              </div>
-              <div className="row row_2">
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 content">
-                  <p className="count">500</p>
-                  <p>Cups of Coffee</p>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 content">
-                  <p className="count">642</p>
-                  <p>Working Hourse</p>
-                </div>
-              </div>
+              <div className="row">{show}</div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col__right">
-              <p className="small_title">ABOUT ME</p>
-              <h2>A UI/UX Designer &amp; Web Developer Based in Philippines</h2>
-              <p className="text">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info_left">
-                  <p>
-                    Name: <span>Clyde Nowitzki</span>
-                  </p>
-                  <p>
-                    Date of birth: <span>January 01, 1990</span>
-                  </p>
-                  <p>
-                    Address: <span> San Francisco CA 97987 USA</span>
-                  </p>
+              <Flip bottom>
+                <p className="small_title">ABOUT ME</p>
+              </Flip>
+              <Bounce right>
+                <h2>
+                  A UI/UX Designer &amp; Web Developer Based in Philippines
+                </h2>
+                <p className="text">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info_left">
+                    <p>
+                      Name: <span>Clyde Nowitzki</span>
+                    </p>
+                    <p>
+                      Date of birth: <span>January 01, 1990</span>
+                    </p>
+                    <p>
+                      Address: <span> San Francisco CA 97987 USA</span>
+                    </p>
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info_left">
+                    <p>
+                      Zip code: <span>Clyde Nowitzki</span>
+                    </p>
+                    <p>
+                      Email: <span>cydenowitzki@gmail.com</span>
+                    </p>
+                    <p>
+                      Phone: <span>+1-2234-5678-9-0 </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info_left">
-                  <p>
-                    Zip code: <span>Clyde Nowitzki</span>
-                  </p>
-                  <p>
-                    Email: <span>cydenowitzki@gmail.com</span>
-                  </p>
-                  <p>
-                    Phone: <span>+1-2234-5678-9-0 </span>
-                  </p>
-                </div>
-              </div>
-              <button>DOWNLOAD CV</button>
+                <button>DOWNLOAD CV</button>
+              </Bounce>
             </div>
           </div>
         </div>
         <div className="skill container">
           <div className="row">
-            <p className="small_title">SKILLS</p>
-            <h1>My Skills</h1>
+            <Flip bottom>
+              <p className="small_title">SKILLS</p>
+              <h1>My Skills</h1>
+            </Flip>
           </div>
+
           <div className="row mt-4">
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="tag">
-                <h6>ADOBE PHOTOSHOP</h6>
-                <p className="percent">90%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={90}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "90%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>JAVASCRIPT</h6>
-                <p className="percent">85%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={85}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "85%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>WORDPRESS</h6>
-                <p className="percent">70%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={70}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "70%" }}
-                />
-              </div>
+              {showSkills_1}
             </div>
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="tag">
-                <h6>FIGMA</h6>
-                <p className="percent">95%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={95}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "95%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>HTML5</h6>
-                <p className="percent">95%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={95}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "95%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>ADOBE XD</h6>
-                <p className="percent">80%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={80}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "80%" }}
-                />
-              </div>
+              {showSkills_2}
             </div>
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div className="tag">
-                <h6>ADOBE ILLUSTRATOR</h6>
-                <p className="percent">90%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={90}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "90%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>CSS3</h6>
-                <p className="percent">90%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={90}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "90%" }}
-                />
-              </div>
-              <div className="tag">
-                <h6>SEO</h6>
-                <p className="percent">75%</p>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuenow={75}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  style={{ width: "75%" }}
-                />
-              </div>
+              {showSkills_3}
             </div>
           </div>
         </div>
         <div className="testimonial container">
           <div className="row mb-4">
-            <p className="small_title">TESTIMONIAL</p>
-            <h1>Happy Guests</h1>
+            <Flip bottom>
+              <p className="small_title">TESTIMONIAL</p>
+              <h1>Happy Guests</h1>
+            </Flip>
           </div>
-          <Carousel />
+          <Fade bottom>
+            <Carousel />
+          </Fade>
+
           <div className="about_c">
             <p>
               Copyright ©2021 All rights reserved | This template is made with
@@ -263,6 +297,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Scrollup />
     </div>
   );
 }

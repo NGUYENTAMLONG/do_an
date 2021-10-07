@@ -70,6 +70,10 @@ body {
   color: #0084ff;
 }
 
+.services .card .card__name {
+  height: 70px;
+}
+
 .services .card .card__name h4 {
   font-weight: bold;
 }

@@ -63,23 +63,26 @@
           "transparent";
       }
     };
-
     let flag = false;
-
     document.querySelector(".fa-align-right").onclick = function () {
       if (flag == false) {
         document.querySelector(".menu_reponsive").style.top = "50px";
+        document.querySelector(".fa-align-right").classList.add("fa-times");
         flag = true;
       } else {
         document.querySelector(".menu_reponsive").style.top = "-400px";
+        document.querySelector(".fa-align-right").classList.remove("fa-times");
+
         flag = false;
       }
     };
-    document.querySelectorAll(".menu_reponsive .menu ul li").forEach((item) => {
-      item.onclick = function () {
-        document.querySelector(".menu_reponsive").style.top = "-400px";
-        flag = false;
-      };
-    });
+    document
+      .querySelectorAll(".menu_reponsive .menu ul li a")
+      .forEach((item) => {
+        item.onclick = function (e) {
+          // document.querySelector(".menu_reponsive").style.top = "-400px";
+          // flag = false;
+        };
+      });
   </script>
 </html>
