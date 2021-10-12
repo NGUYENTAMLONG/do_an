@@ -38,7 +38,9 @@ a.non-textdecoration-web:hover {
   text-decoration: none;
   margin-left: 20px;
 }
-
+iframe {
+  box-shadow: 0 5px 25px -2px rgb(184, 184, 184);
+}
 .contact_c {
   width: 100%;
   text-align: center;

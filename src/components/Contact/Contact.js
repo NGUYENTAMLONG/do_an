@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./style/Contact.css";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 import Scrollup from "../Scrollup";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
+import emailjs from "emailjs-com";
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_o994v8w",
+        e.target,
+        "user_IDHeOfsUpMk0YkUXbQ7BL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          swal("Successfully!! You have  sent the mail ^^", {
+            icon: "success",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          swal("Oh noes!", "Can't send your mail :( ", "error");
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div>
       <div className="contact container">
@@ -57,7 +84,13 @@ export default function Contact() {
               </div>
             </div>
             <Fade top cascade>
-              <form id="contactForm" name="contactForm" className="contactForm">
+              <form
+                id="contactForm"
+                name="contactForm"
+                className="contactForm"
+                ref={form}
+                onSubmit={sendEmail}
+              >
                 <div className="row">
                   <div className="col-md-12">
                     <div className="form-group">
@@ -116,7 +149,6 @@ export default function Contact() {
                           fontWeight: "bold",
                         }}
                       />
-                      <div className="submitting" />
                     </div>
                   </div>
                 </div>
