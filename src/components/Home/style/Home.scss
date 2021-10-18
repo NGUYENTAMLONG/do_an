@@ -39,6 +39,7 @@ body {
         border: none;
         cursor: pointer;
         -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+        outline: none;
       }
       button:nth-of-type(1) {
         padding: 20px 25px;

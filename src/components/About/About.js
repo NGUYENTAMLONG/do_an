@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./style/About.css";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
@@ -6,10 +6,19 @@ import Flip from "react-reveal/Flip";
 import CountUp from "react-countup";
 import Bounce from "react-reveal/Bounce";
 import Rotate from "react-reveal/Rotate";
-import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Scrollup from "../Scrollup";
+import Rellax from "rellax";
+// parallax
+import img1 from "./images/img1.jpeg";
+import img2 from "./images/img2.jpeg";
+import clound from "./images/clound.png";
+import code from "./images/code.png";
+import blockchain from "./images/blockchain.png";
+
+import { Parallax } from "react-parallax";
+
 export default function About() {
   let statistical = [
     { count: 1250, dr: 3, p: "Happy Clients" },
@@ -119,6 +128,42 @@ export default function About() {
       },
     ],
   ];
+
+  const Container = () => (
+    <Parallax
+      bgImage={img1}
+      bgImageAlt="the cat"
+      strength={-200}
+      style={{ marginTop: "150px" }}
+    >
+      <h2
+        style={{
+          fontWeight: "bold",
+          color: "#0084ff",
+          background: "rgba(0, 0, 0, 0.705)",
+          padding: 20,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+          borderRadius: "10px",
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <span style={{ color: "0084ff" }}>Our Slogan</span>
+        <br></br>
+        <span style={{ color: "white" }} className="slogan">
+          <i class="fas fa-quote-left"></i>
+          Our Passion, Your Business <i class="fas fa-quote-right"></i>
+        </span>
+      </h2>
+
+      <div style={{ height: "350px" }} />
+    </Parallax>
+  );
+
   function Format(props) {
     return (
       <div key={props.index}>
@@ -149,6 +194,19 @@ export default function About() {
       </div>
     );
   }
+  const insideStyles = {
+    background: "white",
+    padding: 20,
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+    borderRadius: "20px",
+    outline: "none",
+    border: "none",
+    cursor: "pointer",
+    fontWeight: "bold",
+  };
   let showSkills_1 = skill_scale[0].map((item, index) => {
     return (
       <Format
@@ -191,6 +249,17 @@ export default function About() {
       />
     );
   });
+
+  useEffect(() => {
+    var rellax = new Rellax(".rellax", {
+      speed: -2,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false,
+    });
+  }, []);
   return (
     <div>
       <div>
@@ -210,6 +279,25 @@ export default function About() {
               <h1 className="about_title">About Me</h1>
             </Flip>
           </div>
+          <div
+            className="rellax"
+            style={{ position: "absolute", right: "400px", top: "200px" }}
+          >
+            <img alt="" src={clound} width="170px" />
+          </div>
+          <div
+            className="rellax"
+            style={{ position: "absolute", left: "10px", top: "400px" }}
+          >
+            <img alt="" src={clound} width="250px" />
+          </div>
+          <div
+            className="rellax"
+            style={{ position: "absolute", right: "50px", top: "350px" }}
+          >
+            <img alt="" src={clound} width="100px" />
+          </div>
+
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col__left">
               <div className="row">{show}</div>
@@ -255,6 +343,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <Container />
         <div className="skill container">
           <div className="row">
             <Flip bottom>
@@ -274,6 +363,63 @@ export default function About() {
               {showSkills_3}
             </div>
           </div>
+        </div>
+        <Parallax
+          bgImage={img2}
+          strength={200}
+          renderLayer={(percentage) => (
+            <div>
+              <div
+                style={{
+                  position: "absolute",
+                  background: `rgba(0,132,255, ${percentage * 1})`,
+                  left: "50%",
+                  top: "50%",
+                  borderRadius: "50%",
+                  transform: "translate(-50%,-50%)",
+                  width: percentage * 500,
+                  height: percentage * 500,
+                }}
+              />
+            </div>
+          )}
+        >
+          <div style={{ height: 500 }}>
+            <button style={insideStyles}>
+              <Link to="/Contact">Contact Us Now </Link>
+            </button>
+          </div>
+        </Parallax>
+        <div
+          className="rellax"
+          style={{ position: "absolute", top: "1850px", left: "-30px" }}
+        >
+          <img alt="" src={code} width="150px" />
+        </div>
+        <div
+          className="rellax"
+          style={{ position: "absolute", top: "2230px", left: "100px" }}
+        >
+          <img alt="" src={blockchain} width="80px" />
+        </div>
+
+        <div
+          className="rellax"
+          style={{ position: "absolute", top: "1850px", left: "400px" }}
+        >
+          <img alt="" src={blockchain} width="50px" />
+        </div>
+        <div
+          className="rellax"
+          style={{ position: "absolute", top: "1800px", right: "200px" }}
+        >
+          <img alt="" src={code} width="100px" />
+        </div>
+        <div
+          className="rellax"
+          style={{ position: "absolute", top: "2200px", right: "100px" }}
+        >
+          <img alt="" src={blockchain} width="100px" />
         </div>
         <div className="testimonial container">
           <div className="row mb-4">

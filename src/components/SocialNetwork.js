@@ -8,27 +8,27 @@ export default function SocialNetwork() {
           <p>Follow us</p>
         </li>
         <li>
-          <a href="#">
+          <a href="https://reactjs.org/docs/create-a-new-react-app.html">
             <i className="fab fa-2x fa-facebook"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://reactjs.org/docs/create-a-new-react-app.html">
             <i className="fab fa-2x fa-behance-square"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://reactjs.org/docs/create-a-new-react-app.html">
             <i className="fab fa-2x fa-dribbble"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://reactjs.org/docs/create-a-new-react-app.html">
             <i className="fab fa-2x fa-instagram-square"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://reactjs.org/docs/create-a-new-react-app.html">
             <i className="fab fa-2x fa-skype"></i>
           </a>
         </li>

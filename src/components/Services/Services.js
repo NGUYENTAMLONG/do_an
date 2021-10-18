@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Scrollup from "../Scrollup";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
+
 export default function Services() {
   let array_card = [
     {
@@ -150,6 +151,7 @@ export default function Services() {
       </div>
     );
   });
+
   return (
     <div className="services container">
       <div className="row mb-4">

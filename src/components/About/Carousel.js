@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-
+import "./style/About.css";
 export default function Carousel() {
   var settings = {
     dots: true,
@@ -84,7 +84,7 @@ export default function Carousel() {
   ];
   let show = array.map((item, index) => {
     return (
-      <div key={item.id} className="mt-4">
+      <div key={item.id} className="slide mt-4">
         <div className="box">
           <div className="box__header">
             <div className="box__avatar">

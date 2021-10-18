@@ -104,7 +104,7 @@ export default function Blog() {
                 <span className="num">{item.num_Cmt}</span> COMMENTS
               </p>
               <div className="info__name">
-                <a href="#">
+                <a href="https://reactjs.org/docs/create-a-new-react-app.html">
                   <h4>{item.name}</h4>
                 </a>
               </div>

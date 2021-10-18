@@ -159,16 +159,28 @@ export default function Contact() {
                 </h3>
                 <Fade top cascade>
                   <p>
-                    <a className="non-textdecoration-web" href="#">
+                    <a
+                      className="non-textdecoration-web"
+                      href="https://reactjs.org/docs/create-a-new-react-app.html"
+                    >
                       FACEBOOK
                     </a>
-                    <a className="non-textdecoration-web" href="#">
+                    <a
+                      className="non-textdecoration-web"
+                      href="https://reactjs.org/docs/create-a-new-react-app.html"
+                    >
                       TWITTER
                     </a>
-                    <a className="non-textdecoration-web" href="#">
+                    <a
+                      className="non-textdecoration-web"
+                      href="https://reactjs.org/docs/create-a-new-react-app.html"
+                    >
                       INSTAGRAM
                     </a>
-                    <a className="non-textdecoration-web" href="#">
+                    <a
+                      className="non-textdecoration-web"
+                      href="https://reactjs.org/docs/create-a-new-react-app.html"
+                    >
                       DRIBBBLE
                     </a>
                   </p>
@@ -183,6 +195,7 @@ export default function Contact() {
             <Slide right cascade>
               <div>
                 <iframe
+                  title="This is a unique title"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9302652476435!2d105.78692921475562!3d21.03547608599477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab49e93f280f%3A0x9deb60ce2fb036a8!2zMjYgVHLhuqduIFRow6FpIFTDtG5nLCBE4buLY2ggVuG7jW5nIEjhuq11LCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1603272026990!5m2!1svi!2s"
                   width="100%"
                   height={670}

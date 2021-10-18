@@ -68,27 +68,31 @@ export default function Works() {
         <nav aria-label="Page navigation">
           <ul className="pagination justify-content-center mt-4">
             <li className="page-item disabled">
-              <a className="page-link" href="#" tabIndex={-1}>
+              <a
+                className="page-link"
+                href="http://localhost:3005/works"
+                tabIndex={-1}
+              >
                 Previous
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#">
+              <a className="page-link" href="http://localhost:3005/works">
                 1
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#">
+              <a className="page-link" href="http://localhost:3005/works">
                 2
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#">
+              <a className="page-link" href="http://localhost:3005/works">
                 3
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#">
+              <a className="page-link" href="http://localhost:3005/works">
                 Next
               </a>
             </li>

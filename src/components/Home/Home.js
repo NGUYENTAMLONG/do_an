@@ -2,6 +2,7 @@ import React from "react";
 import "./style/Home.css";
 import Fade from "react-reveal/Fade";
 import LightSpeed from "react-reveal/LightSpeed";
+
 export default function Home() {
   return (
     <div>

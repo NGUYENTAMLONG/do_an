@@ -46,6 +46,7 @@ body {
   border: none;
   cursor: pointer;
   -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+  outline: none;
 }
 
 .home .col__left .col__left__btns button:nth-of-type(1) {
